@@ -472,7 +472,6 @@ footer {
   align-items: center;
   line-height: 1;
 }
-/* MOBILE OPTIMIZATION: Add this at the end of your CSS */
 @media (max-width: 700px) {
   html, body {
     font-size: 16px;
@@ -505,7 +504,7 @@ footer {
   .hero {
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px 6vw 24px 6vw;
+    padding: 24px 4vw 24px 4vw;
     border-radius: 0 0 24px 24px;
     min-height: 40vh;
     gap: 12px;
@@ -516,7 +515,7 @@ footer {
     max-width: 100%;
   }
   .hero h1 {
-    font-size: 1.7em;
+    font-size: 1.6em;
   }
   .hero-golf-ball {
     display: none;
@@ -528,7 +527,7 @@ footer {
     width: 100%;
   }
   .card, .timeline-step, .video-card {
-    max-width: 95vw;
+    max-width: 98vw;
     width: 98vw;
     min-width: 0;
     box-sizing: border-box;
@@ -536,9 +535,12 @@ footer {
   .gallery-grid img,
   .video-card iframe,
   .map-container iframe {
-    width: 95vw !important;
+    width: 98vw !important;
     max-width: 360px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .programs, .testimonials, .contact, footer {
     margin: 18px 2vw;
