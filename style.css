@@ -472,3 +472,97 @@ footer {
   align-items: center;
   line-height: 1;
 }
+/* MOBILE OPTIMIZATION: Add this at the end of your CSS */
+@media (max-width: 700px) {
+  html, body {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 6vw 10px 6vw;
+    width: 100vw;
+  }
+  .logo {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+  }
+  .main-header nav ul {
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+  .main-header nav a {
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-size: 1em;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 6vw 24px 6vw;
+    border-radius: 0 0 24px 24px;
+    min-height: 40vh;
+    gap: 12px;
+  }
+  .hero-content {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 1.7em;
+  }
+  .hero-golf-ball {
+    display: none;
+  }
+  .lesson-cards, .timeline, .gallery-grid, .video-grid {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+  }
+  .card, .timeline-step, .video-card {
+    max-width: 95vw;
+    width: 98vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .gallery-grid img,
+  .video-card iframe,
+  .map-container iframe {
+    width: 95vw !important;
+    max-width: 360px;
+    height: auto;
+  }
+  .programs, .testimonials, .contact, footer {
+    margin: 18px 2vw;
+    border-radius: 14px;
+    font-size: 1em;
+  }
+  .testimonials,
+  .gallery,
+  .videos-section,
+  .contact {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .map-container {
+    width: 98vw;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer {
+    margin: 10px 0 0 0;
+    border-radius: 18px 18px 0 0;
+    font-size: 0.96em;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
