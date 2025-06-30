@@ -6,60 +6,87 @@
   <title>Golf With Coach Terry</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
+  
 </head>
 <body>
+  
   <!-- HEADER -->
   <header class="main-header">
-    <div class="logo">
+    <a href="index.html" class="logo" style="text-decoration:none;">
       <span class="golf-ball">⛳️</span>
       <span class="site-title">Golf With Coach Terry</span>
-    </div>
+    </a>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#lessons">Lessons</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#lessons">Lessons</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="videos.html">Galleries</a></li>
+        <li><a href="book.html">Book</a></li>
       </ul>
     </nav>
   </header>
+  
 
   <!-- HERO SECTION -->
-  <section class="hero" id="about">
+  <section class="hero section" id="about">
     <div class="hero-content">
-      <h1>Fun, Friendly Golf Coaching in LA</h1>
+      <h1>
+        Fun, Friendly Golf Coaching in LA
+      </h1>
       <p>From total beginners to improvers—Coach Terry makes golf easy, relaxed, and actually fun.</p>
       <a href="#contact" class="btn hero-btn">Book Your Lesson</a>
     </div>
     <div class="hero-golf-ball"></div>
   </section>
 
+  <!-- HOW IT WORKS -->
+  <section class="section how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="timeline">
+      <div class="timeline-step">
+        <span class="timeline-icon">📞</span>
+        <p>Contact Terry</p>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-step">
+        <span class="timeline-icon">⛳️</span>
+        <p>Meet at Course</p>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-step">
+        <span class="timeline-icon">🚀</span>
+        <p>Elevate Your Game</p>
+      </div>
+    </div>
+  </section>
+
   <!-- LESSON CARDS -->
-  <section class="lessons" id="lessons">
+  <section class="lessons section" id="lessons">
     <h2>Lesson Packages</h2>
     <div class="lesson-cards">
       <div class="card">
         <div class="icon">🧑‍🏫</div>
         <h3>1-on-1 Session</h3>
-        <p>$75/hr – Personal, relaxed, and focused just on you.</p>
+        <p>$125/hr – Personal, relaxed, and focused just on you.</p>
       </div>
       <div class="card">
         <div class="icon">👨‍👩‍👧‍👦</div>
         <h3>Group Lesson</h3>
-        <p>$40/person – Learn together. Great for friends and family!</p>
+        <p>$199/person – Learn together. Great for friends and family!</p>
       </div>
       <div class="card">
-        <div class="icon">📹</div>
-        <h3>Virtual Swing Check</h3>
-        <p>$25 – Send your swing video for expert tips, no matter where you are.</p>
+        <div class="icon">🧒🏻</div>
+        <h3>Juniors</h3>
+        <p>$100 - Special rate for kids under 16.</p>
       </div>
     </div>
   </section>
 
   <!-- PROGRAMS -->
-  <section class="programs" id="programs">
+  <section class="programs section" id="programs">
     <h2>Programs</h2>
     <p>
       Beginner Bootcamps, Swing Clinics, Junior Golf, and more! <br>
@@ -68,7 +95,7 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
+  <section class="testimonials section" id="testimonials">
     <h2>Happy Golfers</h2>
     <blockquote>
       “Terry helped me drop 10 strokes in just 3 months! Super supportive and fun lessons.”<br>
@@ -81,26 +108,41 @@
   </section>
 
   <!-- GALLERY -->
-  <section class="gallery" id="gallery">
+  <section class="gallery section" id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="images/photo1.jpg" alt="Coach Terry coaching">
-      <img src="images/photo2.jpg" alt="Golf lesson on the course">
-      <img src="images/photo3.jpg" alt="Happy group lesson">
+      <img src="images/photo1.jpg" alt="Coach Terry coaching" />
+      <img src="images/photo2.jpg" alt="Golf lesson on the course" />
+      <img src="images/photo3.jpg" alt="Happy group lesson" />
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Book a Lesson</h2>
-    <form id="bookingForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <input type="text" placeholder="Preferred Date & Time" required />
-      <textarea placeholder="Message or questions..." rows="4"></textarea>
-      <button type="submit" class="btn">Send Request</button>
-    </form>
-  </section>
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <h2>Book a Lesson</h2>
+  <h3 style="margin-top:28px; margin-bottom:8px;">Lesson Location:</h3>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Westchester+Golf+Course+Los+Angeles&z=17&output=embed"
+      width="100%"
+      height="300"
+      style="border:0; border-radius:18px; box-shadow:0 2px 16px rgba(34,48,76,0.09);"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <form id="bookingForm" action="https://formspree.io/f/xnnvgrpz" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="text" name="datetime" placeholder="Preferred Date & Time" required />
+    <textarea name="message" placeholder="Message or questions..."></textarea>
+    <button type="submit" class="btn">Send Request</button>
+  </form>
+  <div id="thankyou-message" style="display:none; text-align:center; margin-top:20px;">
+    <h3>Thank you! Your request has been sent.</h3>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -110,3 +152,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
