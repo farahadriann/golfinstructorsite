@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- In <head> of EVERY HTML file -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Westchester Golf Lessons | Golf With Coach Terry</title>
     <meta name="description" content="Fun, friendly golf lessons for all ages at Westchester Golf Course, Los Angeles, CA. Book your lesson with Coach Terry today!">
     <!-- Optional: More SEO meta tags below -->
@@ -19,25 +20,26 @@
   </head>
   
 <body>
-  
-  <!-- HEADER -->
+  <!-- SIDEBAR NAV (Desktop) / TOP NAV (Mobile) -->
   <header class="main-header">
-    <a href="index.html" class="logo" style="text-decoration:none;">
-      <span class="site-title">Golf With Coach Terry</span>
-    </a>
-    
-    <nav>
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#lessons">Lessons</a></li>
-        <li><a href="index.html#programs">Programs</a></li>
-        <li><a href="index.html#testimonials">Testimonials</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="videos.html">Galleries</a></li>
-        <li><a href="book.html">Book</a></li>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="site-title">Golf With Coach Terry</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="videos.html">Gallery</a></li>
+        <li><a href="book.html" class="cta">Book</a></li>
       </ul>
     </nav>
+    <div class="nav-overlay"></div>
   </header>
+  
+  
   
 
   <!-- HERO SECTION -->

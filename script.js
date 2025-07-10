@@ -98,3 +98,46 @@ if (golfBall && hero) {
     golfBall.classList.remove('parallax');
   });
 }
+// Hamburger menu open/close
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    overlay.classList.toggle('open');
+  });
+
+  overlay.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    overlay.classList.remove('open');
+  });
+
+  // Optional: close nav on link click (mobile)
+  navLinks.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      overlay.classList.remove('open');
+    })
+  );
+});
+// Hamburger menu logic
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navOverlay = document.querySelector(".nav-overlay");
+
+  if(navToggle && navLinks && navOverlay) {
+    navToggle.addEventListener("click", function() {
+      navLinks.classList.toggle("open");
+      navOverlay.classList.toggle("open");
+    });
+    navOverlay.addEventListener("click", function() {
+      navLinks.classList.remove("open");
+      navOverlay.classList.remove("open");
+    });
+  }
+});
