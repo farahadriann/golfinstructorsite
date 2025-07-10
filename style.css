@@ -719,3 +719,18 @@ footer {
   display: inline-block;
   padding: 13px 34px;
 }
+.scheduler-container {
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(34,48,76,0.09);
+  background: #fff;
+}
+
+.scheduler-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  border: 0;
+}

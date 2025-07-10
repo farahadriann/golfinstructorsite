@@ -1,26 +1,30 @@
-// Booking form thank you message
-document.getElementById("bookingForm").addEventListener("submit", function (e) {
-  setTimeout(function () {
-    document.getElementById("bookingForm").style.display = "none";
-    document.getElementById("thankyou-message").style.display = "block";
-  }, 100);
-});
+// Booking form thank you message (only if the form exists)
+const bookingForm = document.getElementById("bookingForm");
+if (bookingForm) {
+  bookingForm.addEventListener("submit", function (e) {
+    setTimeout(function () {
+      bookingForm.style.display = "none";
+      const thankyou = document.getElementById("thankyou-message");
+      if (thankyou) thankyou.style.display = "block";
+    }, 100);
+  });
+}
 
-// Airplane takeoff scroll-trigger
+// Airplane takeoff scroll-trigger (only if airplane exists)
 window.addEventListener("scroll", function() {
   const airplane = document.getElementById("airplane-container");
-  if (!airplane) return;
-  // Trigger when you scroll past the hero (or 120px down)
-  let triggerY = window.innerHeight * 0.45; // More robust
-  if (window.scrollY > triggerY) {
-    airplane.classList.add("takeoff");
-  } else {
-    airplane.classList.remove("takeoff");
+  if (airplane) {
+    // Trigger when you scroll past the hero (or 120px down)
+    let triggerY = window.innerHeight * 0.45; // More robust
+    if (window.scrollY > triggerY) {
+      airplane.classList.add("takeoff");
+    } else {
+      airplane.classList.remove("takeoff");
+    }
   }
 });
 
 // Fade in sections as you scroll
-// Smoother section reveal with Intersection Observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -28,29 +32,27 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target); // Only reveal once
     }
   });
-}, {
-  threshold: 0.18
-});
+}, { threshold: 0.18 });
 
 document.querySelectorAll('.section').forEach(section => {
   observer.observe(section);
 });
+
+// On DOM load, fade in hero section/content if present
 window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.hero.section').classList.add('visible');
-  setTimeout(() => {
-    document.querySelector('.hero-content').classList.add('visible');
-  }, 400);
+  const heroSection = document.querySelector('.hero.section');
+  if (heroSection) heroSection.classList.add('visible');
+  const heroContent = document.querySelector('.hero-content');
+  if (heroContent) setTimeout(() => heroContent.classList.add('visible'), 400);
 });
 
-
-// Gallery: Simple lightbox effect
+// Gallery: Simple lightbox effect (only if gallery exists)
 document.querySelectorAll('.gallery-grid img').forEach(img => {
   img.addEventListener('click', function() {
     const overlay = document.createElement('div');
     overlay.style.position = 'fixed';
     overlay.style.top = 0; overlay.style.left = 0;
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
+    overlay.style.width = '100vw'; overlay.style.height = '100vh';
     overlay.style.background = 'rgba(34,48,76,0.8)';
     overlay.style.display = 'flex';
     overlay.style.alignItems = 'center';
@@ -67,23 +69,32 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
     document.body.appendChild(overlay);
   });
 });
+
+// Shrink header on scroll
 window.addEventListener('scroll', function() {
   const header = document.querySelector('.main-header');
-  if (window.scrollY > 40) {
-    header.classList.add('shrunk');
-  } else {
-    header.classList.remove('shrunk');
+  if (header) {
+    if (window.scrollY > 40) {
+      header.classList.add('shrunk');
+    } else {
+      header.classList.remove('shrunk');
+    }
   }
 });
+
+// Animated golf ball (only if .animated-golf-ball and .hero exist)
 const golfBall = document.querySelector('.animated-golf-ball');
-document.querySelector('.hero').addEventListener('mousemove', function(e) {
-  const rect = this.getBoundingClientRect();
-  const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
-  const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
-  golfBall.style.transform = `translate(${x}px, ${y}px)`;
-  golfBall.classList.add('parallax');
-});
-document.querySelector('.hero').addEventListener('mouseleave', function() {
-  golfBall.style.transform = '';
-  golfBall.classList.remove('parallax');
-});
+const hero = document.querySelector('.hero');
+if (golfBall && hero) {
+  hero.addEventListener('mousemove', function(e) {
+    const rect = this.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
+    golfBall.style.transform = `translate(${x}px, ${y}px)`;
+    golfBall.classList.add('parallax');
+  });
+  hero.addEventListener('mouseleave', function() {
+    golfBall.style.transform = '';
+    golfBall.classList.remove('parallax');
+  });
+}

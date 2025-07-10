@@ -3,33 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book a Lesson | Coach Terry</title>
+  <title>Book Your Lesson | Golf With Coach Terry</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header class="main-header">
-        <a href="index.html" class="logo" style="text-decoration:none;">
-          
-          <span class="site-title">Golf With Coach Terry</span>
-        </a>
-        <nav>
-          <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#lessons">Lessons</a></li>
-            <li><a href="index.html#programs">Programs</a></li>
-            <li><a href="index.html#testimonials">Testimonials</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="videos.html">Galleries</a></li>
-            <li><a href="book.html">Book</a></li>
-          </ul>
-        </nav>
-      </header>
+  <!-- HEADER (Same as index.html) -->
+  <header class="main-header">
+    <a href="index.html" class="logo" style="text-decoration:none;">
+      <span class="site-title">Golf With Coach Terry</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#lessons">Lessons</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="videos.html">Galleries</a></li>
+        <li><a href="book.html" class="active">Book</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="section" id="book visible">
-    <h2>Book Your Golf Lesson</h2>
-    <!-- Replace the src below with YOUR real Acuity link -->
-    <iframe src="https://app.acuityscheduling.com/schedule.php?owner=YOUR_ID" frameBorder="0"></iframe>
+  <section class="section contact" style="margin-top:40px;">
+    <h2 style="margin-bottom:24px;">Book Your Lesson Online</h2>
+    <div class="scheduler-container">
+      <!-- Replace the src link below with your own Acuity or Calendly scheduling embed -->
+      <iframe src="https://app.acuityscheduling.com/schedule.php?owner=YOUR_ID"
+              title="Online Scheduling"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen></iframe>
+    </div>
+    <div style="margin-top:24px;">
+      <h3>Lesson Location</h3>
+      <p style="margin-bottom: 16px;">
+        Westchester Golf Course<br>
+        6900 W Manchester Ave, Los Angeles, CA 90045
+      </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Westchester+Golf+Course+Los+Angeles&z=17&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -38,7 +59,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-<!--/*Replace the iframe src with the code Acuity gives you—yours will have your actual scheduler link!*/  -->
-
