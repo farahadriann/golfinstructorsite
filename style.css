@@ -22,6 +22,7 @@ html, body {
   min-height: 100vh;
 }
 
+
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -167,29 +168,48 @@ h1, h2, h3 {
 /* Remove horizontal scroll on mobile everywhere */
 @media (max-width: 900px) {
   html, body {
-    max-width: 100vw;
+    max-width: 100%;
     overflow-x: hidden !important;
   }
 }
 
 /* Hero Section */
 .hero {
-  min-height: 48vh;
+  width: 100vw;
+  min-height: 52vh; /* or higher for more visual impact */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(110deg, var(--navy) 65%, var(--orange) 110%);
-  color: var(--white);
-  padding: 40px 0 24px 0;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
+  justify-content: center;
   position: relative;
+  padding: 0;
+  margin: 0;
+  border-bottom-left-radius: 0; /* Remove radius for full width */
+  border-bottom-right-radius: 0;
   overflow: hidden;
+  color: var(--white);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100%;
+  background:
+    linear-gradient(rgba(34,48,76,0.55), rgba(34,48,76,0.55)), /* navy overlay for readability */
+    url('images/golf-course.jpg') center center/cover no-repeat;
+  opacity: 1; /* overlay controls all */
+  z-index: 1;
+  pointer-events: none;
 }
 .hero-content {
-  max-width: 600px;
-  margin-left: 12vw;
+  position: relative;
   z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16vw 4vw 11vw 4vw;
+  font-size: 1em;
 }
 .hero h1 {
   font-size: 2.1em;
@@ -231,9 +251,9 @@ h1, h2, h3 {
     box-sizing: border-box;
   }
   .hero-content {
-    margin: 0 4vw !important;
-    max-width: 100vw !important;
-    width: 100vw !important;
+    margin: 0 auto !important;
+    text-align: center;
+    align-items: center;
   }
   .hero h1 {
     font-size: 1.19em !important;
@@ -701,32 +721,20 @@ footer {
     margin-top: 0.65em;
     margin-bottom: 0.3em;
   }
-  .lesson-cards, .timeline, .gallery-grid, .video-grid {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    width: 100vw;
-    max-width: 100vw;
+  .timeline, .lesson-cards {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 16px !important;
   }
-  .card, .timeline-step, .video-card {
-    max-width: 96vw;
-    width: 96vw;
-    min-width: 0;
-    box-sizing: border-box;
-    border-radius: 11px;
-    padding: 18px 8px;
-    font-size: 1em !important;
-  }
-  .gallery-grid img,
-  .video-card iframe,
-  .map-container iframe {
+  .timeline-step, .card {
     width: 95vw !important;
-    max-width: 350px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
+    max-width: 350px !important;
+    min-width: 0 !important;
+  }
+  .gallery-grid img, .video-card iframe {
+    width: 98vw !important;
+    max-width: 350px !important;
+    height: auto !important;
   }
   .programs, .testimonials, .contact, footer {
     margin: 13px 2vw;
@@ -853,5 +861,35 @@ footer {
   min-height: 600px;
   border: 0;
 }
+.hero-blob {
+  position: absolute;
+  left: -60px;
+  top: -40px;
+  width: 350px;
+  z-index: 1;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
 
+.hero {
+  position: relative;
+  min-height: 48vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  padding: 40px 0 24px 0;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  overflow: hidden;
+  /* Add this for the background image */
+    background: url(https://images.pexels.com/photos/6573249/pexels-photo-6573249.jpeg) center center/cover no-repeat !important;
+    min-height: 70vh !important;
+  
+  
+}
 
