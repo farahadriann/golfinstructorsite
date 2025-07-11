@@ -103,39 +103,27 @@ if (golfBall && hero) {
   });
 }
 
-// ========== Hamburger Menu ==========
-document.addEventListener("DOMContentLoaded", function () {
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
-  let navOverlay = document.querySelector(".nav-overlay");
-
-  // If overlay doesn't exist, create it once
-  if (!navOverlay) {
-    navOverlay = document.createElement("div");
-    navOverlay.className = "nav-overlay";
-    document.body.appendChild(navOverlay);
-  }
-
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navOverlay = document.querySelector('.nav-overlay');
   function closeMenu() {
-    navLinks.classList.remove("open");
-    navOverlay.classList.remove("open");
+    navLinks.classList.remove('open');
+    navOverlay.classList.remove('open');
     document.body.style.overflow = "";
   }
-
-  if (navToggle && navLinks && navOverlay) {
-    navToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("open");
-      navOverlay.classList.toggle("open");
-      document.body.style.overflow = navLinks.classList.contains("open")
-        ? "hidden"
-        : "";
-    });
-
-    navOverlay.addEventListener("click", closeMenu);
-
-    // Close nav if link clicked (mobile)
-    navLinks.querySelectorAll("a").forEach((link) =>
-      link.addEventListener("click", closeMenu)
-    );
-  }
+  navToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    navOverlay.classList.toggle('open');
+    if (navLinks.classList.contains("open")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+  navOverlay.addEventListener('click', closeMenu);
+  navLinks.querySelectorAll("a").forEach(link =>
+    link.addEventListener("click", closeMenu)
+  );
 });
+
