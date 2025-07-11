@@ -141,3 +141,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+// Hamburger navigation
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navOverlay = document.querySelector(".nav-overlay");
+
+  function closeMenu() {
+    navLinks.classList.remove("open");
+    navOverlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  navToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
+    navOverlay.classList.toggle("open");
+    if (navLinks.classList.contains("open")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+
+  navOverlay.addEventListener("click", closeMenu);
+
+  // Close nav if link is clicked (mobile)
+  navLinks.querySelectorAll("a").forEach(link =>
+    link.addEventListener("click", closeMenu)
+  );
+});
