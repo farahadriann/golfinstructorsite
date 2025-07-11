@@ -892,4 +892,56 @@ footer {
   
   
 }
+.contact-info {
+  display: flex;
+  gap: 56px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 32px auto 0 auto;
+  max-width: 800px;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(34,48,76,0.08);
+  padding: 24px 18px 12px 18px;
+}
+
+.contact-info > div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.contact-info h3 {
+  color: var(--orange);
+  font-size: 1.25em;
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.contact-info p, .contact-info a {
+  color: var(--navy);
+  font-size: 1.12em;
+  margin-bottom: 12px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.map-container iframe {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+@media (max-width: 800px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 97vw;
+    padding: 16px 4vw;
+  }
+}
+
 
