@@ -110,11 +110,13 @@ document.addEventListener("DOMContentLoaded", function() {
   function closeMenu() {
     navLinks.classList.remove('open');
     navOverlay.classList.remove('open');
+    navToggle.classList.remove('active');
     document.body.style.overflow = "";
   }
   navToggle.addEventListener('click', function() {
     navLinks.classList.toggle('open');
     navOverlay.classList.toggle('open');
+    navToggle.classList.toggle('active');
     if (navLinks.classList.contains("open")) {
       document.body.style.overflow = "hidden";
     } else {
