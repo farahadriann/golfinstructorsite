@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Coach Terry | Westchester Golf Lessons</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <button class="nav-toggle" aria-label="Open navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Golf With TM logo" style="height:46px; max-width:170px; display:block;">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="videos.html">Gallery</a></li>
+        <li><a href="book.html" class="cta">Book</a></li>
+      </ul>
+    </nav>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <section class="about-hero" style="position:relative;overflow:hidden;">
+      <!-- Palm trees SVG/PNG background, positioned right bottom -->
+      <img src="images/palms.png" alt="" class="palms-bg" style="position:absolute;right:-15px;bottom:-10px;width:250px;max-width:70vw;z-index:1;opacity:0.85;pointer-events:none;"/>
+      <div class="about-hero-content" style="position:relative;z-index:2;max-width:730px;margin:0 auto;text-align:center;padding:52px 12px 34px 12px;">
+        <img src="images/coach-terry.jpg" alt="Coach Terry Maratos" style="max-width:180px;border-radius:20px;box-shadow:0 6px 22px rgba(34,48,76,0.13);margin-bottom:18px;border:3px solid var(--seafoam);background:var(--white);"/>
+        <h1 style="font-size:2.1em;margin-bottom:10px;color:var(--navy);font-family:'Montserrat',sans-serif;font-weight:800;">Meet Coach Terry Maratos</h1>
+        <p style="color:var(--navy);font-size:1.15em;margin:0 auto 18px auto;max-width:600px;">
+          <strong>Terry Maratos</strong> is a PGA-certified golf instructor at <a href="https://www.westchestergc.com/programs-instruction/" target="_blank" style="color:var(--orange);font-weight:600;">Westchester Golf Course</a> in Los Angeles.<br>
+          With 5+ years of teaching experience, Terry brings fun, encouragement, and easy-to-follow tips for golfers of all skill levels.<br>
+          <em style="color:var(--seafoam);font-size:1em;display:block;margin-top:10px;">
+            “Golf is for everyone. My job is to make it welcoming, stress-free, and genuinely fun—so you want to come back again and again!”
+          </em>
+        </p>
+        <ul style="list-style:none;padding:0;margin:22px auto 22px auto;max-width:340px;text-align:left;">
+          <li style="padding:7px 0;"><span style="color:var(--orange);font-weight:700;">&#x2714;</span> 5+ years of teaching experience</li>
+          <li style="padding:7px 0;"><span style="color:var(--orange);font-weight:700;">&#x2714;</span> Certified at Westchester Golf Course</li>
+          <li style="padding:7px 0;"><span style="color:var(--orange);font-weight:700;">&#x2714;</span> Specializes in beginners & improvers</li>
+          <li style="padding:7px 0;"><span style="color:var(--orange);font-weight:700;">&#x2714;</span> Group, private, and junior lessons</li>
+        </ul>
+        <a href="book.html" class="btn hero-btn" style="margin-top:10px;">Book a Lesson</a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
